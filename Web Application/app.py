@@ -3,33 +3,11 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 # To HASH things
 from werkzeug.security import generate_password_hash, check_password_hash
 
-# SQLite Stuff
-from flask_sqlalchemy import SQLAlchemy
-import sqlite3
-
-
-
 app = Flask(__name__)
 app.config.from_pyfile('config.py') # go to config.py and .env file with vars
 app.secret_key = app.config['SECRET_KEY']
 
-db = SQLAlchemy(app)
 app.app_context().push()
-
-def get_db_connection():
-    # Подключение к базе данных SQLite
-    conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
-    return conn
-
-
-def init_db():
-    # Инициализация базы данных
-    conn = get_db_connection()
-    with app.open_resource('schema.sql', mode='r') as f:
-        conn.cursor().executescript(f.read())
-    conn.commit()
-    conn.close()
 
 
 @app.route('/')
