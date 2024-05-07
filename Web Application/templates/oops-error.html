@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ууупс! Ошибка..</title>
+        {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+        <div>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/oops-error.css') }}"/>
+            <div class="page-error-container">
+                
+                {% include "components/header.html" %}
+
+                {% if Error %}
+                <div class="page-error-hero">
+                    <div class="page-error-hero1 heroContainer">
+                        <div class="page-error-container1">
+                            <div class="page-error-container2">
+                                <span id="error-code" class="page-error-error-code"><span>{{Error.error_id}}</span><br /></span><span id="error-name" class="page-error-error-message">{{Error.error_name}}</span>
+                            </div>
+                            <span id="error-description" class="page-error-error-description">
+                                <span>{{Error.error_description}}</span>
+                            </span>
+                            <a href="/" class="page-error-navlink button">Перейти на главную страницу </a>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="page-error-hero">
+                    <div class="page-error-hero1 heroContainer">
+                        <div class="page-error-container1">
+                            <div class="page-error-container2">
+                                <span id="error-code" class="page-error-error-code"><span>Неизвестная ошибка!</span><br /></span>
+                            </div>
+                            <a href="/" class="page-error-navlink button">Перейти на главную страницу</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
+</html>

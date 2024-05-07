@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Регистрация</title>
+
+        {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+        <div>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/registration.css') }}"/>
+            <div class="form-registration-container">
+                
+                {% include "components/header.html" %}
+
+                <div class="form-registration-hero">
+                    <div class="form-registration-hero1 heroContainer">
+                        <div class="form-registration-registration-container">
+                            <div class="form-registration-container01"><h2 class="form-registration-description">Регистрация</h2></div>
+                            <form name="registrationForm" autocomplete="on" class="form-registration-registration-form" method="post">
+                                <div class="form-registration-container02">
+                                    <input type="text" id="fname" name="surname" required="true" placeholder="Фамилия *" autocomplete="family-name" class="form-registration-textinput input" />
+                                    <input type="text" id="sname" name="name" required="true" placeholder="Имя *" autocomplete="given-name" class="form-registration-textinput1 input" />
+                                    <input type="text" id="fname" name="father_name" required="true" placeholder="Отчество" autocomplete="additional-name" class="form-registration-textinput1 input" />
+                                </div>
+                                <div class="form-registration-container03">
+                                    <input type="tel" id="phoneNumber" name="phone_number" placeholder="Телефон" autocomplete="on" class="form-registration-textinput2 input" />
+                                    <input type="email" id="mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required="true" placeholder="Почта *" autocomplete="email" class="form-registration-textinput3 input" />
+                                </div>
+                                <div class="form-registration-container04">
+                                    <div class="form-registration-container05">
+                                        <span class="form-registration-text input"><span>Дата рождения</span><br /></span><input type="date" max="{{start_date}}" id="birthDate" name="birthDate" autocomplete="bday"  class="form-registration-textinput4 input"/>
+                                    </div>
+                                    <div class="form-registration-container06">
+                                        <span class="form-registration-text03 input"><span>Пол</span><br /></span>
+                                        <div class="form-registration-container07">
+                                            <input type="radio" name="sex" value="Мужчина" autocomplete="sex" class="form-registration-radiobutton" /><span class="form-registration-text06 input"><span>Мужской</span><br /></span>
+                                            <input type="radio" name="sex" value="Женщина" autocomplete="sex" class="form-registration-radiobutton1" /><span class="form-registration-text09 input"><span>Женский</span><br /></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-registration-container08">
+                                    <input type="password" id="password" name="password" required="true" maxlength="40" minlength="9" placeholder="Пароль *" autocomplete="new-password" class="form-registration-textinput5 input" />
+                                    <input type="password" id="rePassword" name="repassword" required="true" maxlength="40" minlength="9" placeholder="Повторите пароль *" autocomplete="new-password" class="form-registration-textinput6 input" />
+                                </div>
+                                <div class="form-registration-container09">
+                                    <span class="form-registration-text12 input"><span>Пароль должен содержать только цифры, знаки и символы латинского алфивита, а так же должен быть более 8 символов</span><br /></span>
+                                    <span class="form-registration-text12 input"><span>*Номер телефона необходим для подтверждения и идентификации вашего аккаунта. </span><br /></span>
+                                    <span class="form-registration-text15 input">
+                                        <span>Передавая указанную информацию, вы принимаете </span><span class="form-registration-text17">условия пользовательского соглашения</span><span>&nbsp;и </span>
+                                        <a href="privacy.html" class="form-registration-navlink">политики конфиденциальности</a><br />
+                                    </span>
+                                </div>
+                                <button name="registration" type="submit" class="form-registration-submit-button button">
+                                    <span class="form-registration-text20"><span>Зарегистрироваться</span><br /></span>
+                                </button>
+                                <span class="form-registration-type-description"><span>Вы </span><a href="login" class="form-registration-navlink1">уже зарегистрированы?</a><br /></span>
+                            </form>
+                            <h2 id="message" class="form-login-message">
+                                {% if ErrorMessage %}
+                                    {{ErrorMessage}}
+                                {% endif%}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
+</html>

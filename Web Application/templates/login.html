@@ -1,21 +1,50 @@
-<!-- templates/login.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h1>Login</h1>
-    <form method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-        <br>
-        <button type="submit">Login</button>
-    </form>
-</body>
+    <head>
+        <title>Войти в аккаунт</title>
+
+        {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+        <div>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}"/>
+            <div class="form-login-container">
+                
+                {% include "components/header.html" %}
+
+                <div class="form-login-hero">
+                    <div class="form-login-hero1 heroContainer">
+                        <div class="form-login-registration-container">
+                            <div class="form-login-container1">
+                                <h2 class="form-login-description"><span>Войти в учетную запись</span><br /></h2>
+                            </div>
+                            <form name="loginForm" autocomplete="on" class="form-login-login-form" method="post">
+                                <div class="form-login-container2">
+                                    <input type="email" id="mailLogin" name="email" required="true" placeholder="Почта" autocomplete="email" class="form-login-textinput input" />
+                                    <input type="password" id="pass" name="password" placeholder="Пароль" autocomplete="current-password" class="form-login-textinput1 input" />
+                                </div>
+                                <button type="submit" class="form-login-submit-button button">
+                                    <span class="form-login-text02">Войти</span>
+                                </button>
+                                <span class="form-login-type-description">
+                                    <span>Вы </span><a href="registration.html" class="form-login-navlink">еще не зарегистрированы</a><span>&nbsp;</span><span>или </span><span class="form-login-text08">хотите восстановить доступ</span>
+                                    <span>?</span>
+                                </span>
+                            </form>
+                            <h2 id="message" class="form-login-message">
+                                {% if ErrorMessage %}
+                                    {{ErrorMessage}}
+                                {% endif%}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
 </html>

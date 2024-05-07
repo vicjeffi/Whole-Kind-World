@@ -1,13 +1,429 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page</h1>
-    <p><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a></p>
-</body>
+    <head>
+        <title>Весь Добрый Мир</title>
+
+        <!-- 
+            Мета данные для превью веб сайта в соц сетях
+            https://habr.com/ru/companies/click/articles/492258/
+        -->
+        <meta property="og:site_name" content="Блог PromoPult о развитии сайта и привлечении клиентов из интернета"/>
+        <meta property="og:title" content='Весь Добрый Мир Платформа для размещения добрых дел от ММОО "Весь Мир Един"!' />
+        <meta property="og:description" content="Хотите помочь нуждающемуся человеку или сами нуждаетесь в помощи? Присоеденийтесь к ВДМ!"/>
+        <meta property="og:image" content="https://blog.promopult.ru/wp-content/uploads/2019/02/checklist01-1200x630.png"/>
+
+        {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+        <div>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}"/>
+            <div class="page-home-container">
+
+                {% include "components/header.html" %}
+
+                <div class="page-home-hero">
+                    <div data-thq="slider" data-loop="true" data-autoplay="true" data-navigation="false" data-pagination="false" data-reverse-direction="false" data-pause-autoplay-on-mouse-enter="false" class="page-home-slider swiper">
+                        <div data-thq="slider-wrapper" class="page-home-slider-wrapper swiper-wrapper">
+                            <div data-thq="slider-slide" class="page-home-slider-slide swiper-slide"></div>
+                            <div data-thq="slider-slide" class="page-home-slider-slide1 swiper-slide"></div>
+                            <div data-thq="slider-slide" class="page-home-slider-slide2 swiper-slide"></div>
+                        </div>
+                        <div data-thq="slider-pagination" class="page-home-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+                            <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet swiper-pagination-bullet-active"></div>
+                            <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet"></div>
+                            <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet"></div>
+                        </div>
+                        <div data-thq="slider-button-prev" class="page-home-slider-button-prev swiper-button-prev"></div>
+                        <div data-thq="slider-button-next" class="page-home-slider-button-next swiper-button-next"></div>
+                    </div>
+                    <div class="page-home-hero1 heroContainer">
+                        <div class="page-home-random-motivations-list">
+                            <h2 class="page-home-features-heading">Платформа Добрый Мир</h2>
+                            <span class="page-home-random-motivation">Любовь и забота не знают возраста. Подари радость детям, утешь больных, поддержи старших. Вместе мы создаем тепло вокруг.</span>
+                            <span class="page-home-random-motivation1">Твоя доброта может исцелять! Помоги тем, кто борется с болезнями, обними детей, поделись заботой со старшими.</span>
+                            <span class="page-home-random-motivation2">Сегодня ты можешь изменить чью-то жизнь. Поддержи благотворительность – дари свет тем, кто в тени.</span>
+                            <span class="page-home-random-motivation3">Дари надежду каждому. Будь опорой для больных, подругой для детей, искренним другом для старших. Твоя помощь важна.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-home-features">
+                    <div class="page-home-features-container featuresContainer">
+                        <div class="page-home-features1">
+                            <div class="page-home-container01">
+                                <h2 class="page-home-features-heading1 heading2"><span>Принцип нашей с вами работы</span><br /></h2>
+                            </div>
+                            <div class="page-home-container02">
+                                <div class="page-home-container03">
+                                    <div class="page-home-container04">
+                                        <span class="page-home-features-heading2 heading3"><span>Создавай или участвуй в акциях и проектах</span><br /></span>
+                                    </div>
+                                    <div class="page-home-container05">
+                                        <span class="page-home-features-heading3 heading3"><span>Зарабатывай баллы чтобы соревноваться с другими участниками или организациями</span><br /></span>
+                                    </div>
+                                    <div class="page-home-container06">
+                                        <span class="page-home-features-heading4 heading3"><span>Продвигай себя или свой бизнес в рейтинге!</span><br /></span>
+                                    </div>
+                                    <div class="page-home-container07">
+                                        <span class="page-home-features-heading5 heading3"><span>Будь полезным обществу и просто твои добро!</span><br /></span>
+                                    </div>
+                                </div>
+                                <div data-thq="slider" data-loop="true" data-autoplay="true" data-navigation="true" data-pagination="false" class="page-home-slider1 swiper">
+                                    <div data-thq="slider-wrapper" class="swiper-wrapper">
+                                        <div data-thq="slider-slide" class="page-home-slider-slide3 swiper-slide">
+                                            <div class="page-home-not-for-mobile">
+                                                <div class="custom-event-feature-card featuresCard custom-event-root-class-name">
+                                                    <div class="custom-event-event-block">
+                                                        <div class="custom-event-header">
+                                                            <div class="custom-event-title-block">
+                                                                <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                            </div>
+                                                            <div class="custom-event-revard-block">
+                                                                <p class="custom-event-revard-count"><span>+100</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="custom-event-sub-header">
+                                                            <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-main-content">
+                                                        <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                        <div class="custom-event-custom-info-block"></div>
+                                                    </div>
+                                                    <div class="custom-event-event-block1">
+                                                        <div class="custom-event-container">
+                                                            <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span>
+                                                            <span class="custom-event-users-responded"><span>1</span></span>
+                                                        </div>
+                                                        <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                            <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                                <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                    <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                        <path d="M426 726v-428l214 214z"></path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                                </li>
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name1">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count"><span>+100</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-sub-header">
+                                                        <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span><span class="custom-event-users-responded"><span>1</span></span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-thq="slider-slide" class="page-home-slider-slide4 swiper-slide">
+                                            <div class="page-home-not-for-mobile1">
+                                                <div class="custom-event-feature-card featuresCard custom-event-root-class-name4">
+                                                    <div class="custom-event-event-block">
+                                                        <div class="custom-event-header">
+                                                            <div class="custom-event-title-block">
+                                                                <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                            </div>
+                                                            <div class="custom-event-revard-block">
+                                                                <p class="custom-event-revard-count"><span>+100</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="custom-event-sub-header">
+                                                            <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-main-content">
+                                                        <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                        <div class="custom-event-custom-info-block"></div>
+                                                    </div>
+                                                    <div class="custom-event-event-block1">
+                                                        <div class="custom-event-container">
+                                                            <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span>
+                                                            <span class="custom-event-users-responded"><span>1</span></span>
+                                                        </div>
+                                                        <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                            <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                                <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                    <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                        <path d="M426 726v-428l214 214z"></path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                                </li>
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name5">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count"><span>+100</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-sub-header">
+                                                        <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span><span class="custom-event-users-responded"><span>1</span></span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-thq="slider-slide" class="page-home-slider-slide5 swiper-slide">
+                                            <div class="page-home-not-for-mobile2">
+                                                <div class="custom-event-feature-card featuresCard custom-event-root-class-name22">
+                                                    <div class="custom-event-event-block">
+                                                        <div class="custom-event-header">
+                                                            <div class="custom-event-title-block">
+                                                                <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                            </div>
+                                                            <div class="custom-event-revard-block">
+                                                                <p class="custom-event-revard-count"><span>+100</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="custom-event-sub-header">
+                                                            <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-main-content">
+                                                        <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                        <div class="custom-event-custom-info-block"></div>
+                                                    </div>
+                                                    <div class="custom-event-event-block1">
+                                                        <div class="custom-event-container">
+                                                            <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span>
+                                                            <span class="custom-event-users-responded"><span>1</span></span>
+                                                        </div>
+                                                        <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                            <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                                <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                    <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                        <path d="M426 726v-428l214 214z"></path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                                </li>
+                                                                <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                    <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name7">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title"><span>Title</span></h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count"><span>+100</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-event-sub-header">
+                                                        <span class="custom-event-creation-text"><span>Создан:</span><br /></span><span class="custom-event-creator-user"><span>username</span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time"><span>01/01/2024</span></span><span class="custom-event-text2">откл.:</span><span class="custom-event-users-responded"><span>1</span></span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1"><span class="custom-event-text3">Скопировать ссылку</span></div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2"><span class="custom-event-text4">Пожаловаться</span></div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-thq="slider-pagination" class="page-home-slider-pagination1 swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
+                                        <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet swiper-pagination-bullet-active"></div>
+                                    </div>
+                                    <div data-thq="slider-button-prev" class="page-home-slider-button-prev1 swiper-button-prev"></div>
+                                    <div data-thq="slider-button-next" class="page-home-slider-button-next1 swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-home-paths">
+                    <div class="page-home-thouse-who-can-help pricingContainer">
+                        <div class="page-home-motivation-header">
+                            <h2 class="page-home-heading heading2">Выбери</h2>
+                            <h2 class="page-home-heading1 heading2">кто ты</h2>
+                            <h2 class="page-home-heading2 heading2">и посмотри как</h2>
+                            <h2 class="page-home-heading3 heading2">ты</h2>
+                            <h2 class="page-home-heading4 heading2">можешь помочь!</h2>
+                        </div>
+                        <div class="page-home-container08">
+                            <div class="page-home-helper-card HelperCard">
+                                <div class="page-home-who-container">
+                                    <h2>ВЫ ГРУППА ЛИЦ</h2>
+                                    <span>Не важно, просто компания друзей или большая организация, любая помощь полезна</span>
+                                </div>
+                                <div class="page-home-can-do-container">
+                                    <span class="page-home-text11 heading3">чЕМ ВЫ МОЖЕТЕ ПОМОЧь</span>
+                                    <div class="page-home-container09">
+                                        <div class="page-home-container10">
+                                            <span class="page-home-text12">✔</span><span class="page-home-free-plan-features"><span>Ручной труд, особенно если вы можете работать сообща!</span><br /></span>
+                                        </div>
+                                        <div class="page-home-container11"><span class="page-home-text15">✔</span><span class="page-home-free-plan-features01">Помощь в сборе средств</span></div>
+                                        <div class="page-home-container12"><span class="page-home-text16">✔</span><span class="page-home-free-plan-features02">Создание и организация частных мероприятий</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-home-helper-card1 HelperCard">
+                                <div class="page-home-who-container1">
+                                    <h2>ВЫ ЧАСТНЫЙ ПРЕДПРИНИМАТЕЛЬ</h2>
+                                    <span>Не помощь от малого бизнеса полезна не только нуждающимся в помощи, но так же дает возможность прославится и вам!</span>
+                                </div>
+                                <div class="page-home-can-do-container1">
+                                    <span class="page-home-text18 heading3">чЕМ ВЫ МОЖЕТЕ ПОМОЧь</span>
+                                    <div class="page-home-container13">
+                                        <div class="page-home-container14"><span class="page-home-text19">✔</span><span class="page-home-free-plan-features03">Создание акций и конкурсов для своего бизнеса</span></div>
+                                        <div class="page-home-container15"><span class="page-home-text20">✔</span><span class="page-home-free-plan-features04">Создание рабочих мест для растущей компании</span></div>
+                                        <div class="page-home-container16"><span class="page-home-text21">✔</span><span class="page-home-free-plan-features05">Образовательные программы</span></div>
+                                        <div class="page-home-container17"><span class="page-home-text22">✔</span><span class="page-home-free-plan-features06">Организация социальных проектов</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-home-helper-card2 HelperCard">
+                                <div class="page-home-who-container2">
+                                    <h2>ВЫ СТУДЕНТ</h2>
+                                    <span>Не важно, просто компания друзей или большая организация, любая помощь полезна</span>
+                                </div>
+                                <div class="page-home-can-do-container2">
+                                    <span class="page-home-text24 heading3">чЕМ ВЫ МОЖЕТЕ ПОМОЧь</span>
+                                    <div class="page-home-container18">
+                                        <div class="page-home-container19"><span class="page-home-text25">✔</span><span class="page-home-free-plan-features07">Участие в проектах</span></div>
+                                        <div class="page-home-container20"><span class="page-home-text26">✔</span><span class="page-home-free-plan-features08">Создание осведомлённости</span></div>
+                                        <div class="page-home-container21"><span class="page-home-text27">✔</span><span class="page-home-free-plan-features09">Пожертвования</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-home-helper-card3 HelperCard">
+                                <div class="page-home-who-container3">
+                                    <h2>ВЫ ИНТЕРЕСУЕТЕСЬ ВОЛОНТЕРСТВОМ</h2>
+                                    <span>Не важно, просто компания друзей или большая организация, любая помощь полезна</span>
+                                </div>
+                                <div class="page-home-can-do-container3">
+                                    <span class="page-home-text29 heading3">чЕМ ВЫ МОЖЕТЕ ПОМОЧь</span>
+                                    <div class="page-home-container22">
+                                        <div class="page-home-container23"><span class="page-home-text30">✔</span><span class="page-home-free-plan-features10">Go for help (Create Events and participate</span></div>
+                                        <div class="page-home-container24"><span class="page-home-text31">✔</span><span class="page-home-free-plan-features11">Create a profile</span></div>
+                                    </div>
+                                </div>
+                                <div class="page-home-need-from-container">
+                                    <span class="page-home-text32 heading3">
+                                        <span>И от вас ничего не требуется!</span><br />
+                                        <span> Просто исследуйте нашу платформу</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
 </html>
