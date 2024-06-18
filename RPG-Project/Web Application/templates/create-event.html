@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form-Create-Event - All United World</title>
+
+        {% include "components/default-meta-and-icons.html" %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+        <div>
+            <link rel="stylesheet" href="{{ url_for('static',filename='css/create-event.css') }}" />
+
+            <div class="form-create-event-container">
+                
+                {% include "components/header.html" %}
+
+                <div class="form-create-event-hero">
+                    <div class="form-create-event-hero1 heroContainer">
+                        <div class="form-create-event-registration-container">
+                            <div class="form-create-event-container01">
+                                <h2 class="form-create-event-description">
+                                    Создать запрос помощи
+                                </h2>
+                            </div>
+                            <form name="registrationEventForm" autocomplete="on" class="form-create-event-registration-form" method="post" enctype="multipart/form-data">
+                                
+                                <div class="form-create-event-container02">
+                                    <input type="text" id="ftit;e" name="title" required="true" placeholder="Краткий заголовок *" autocomplete="off" class="form-create-event-textinput input" />
+                                </div>
+                                <span class="form-create-event-text03">
+                                    <span>Подробное описание проблемы, способы волонтеру связаться с вами</span>
+                                </span>
+                                <div class="form-create-event-container03">
+                                    <input type="text" name='description' placeholder="Подробное описание проблемы, способы волонтеру связаться с вами..." autocomplete="off" class="form-create-event-textarea textarea i-big-input" style="height:200px; word-break: break-word; display:none;"/>
+                                    <div id="source" contenteditable="" style="
+                                    border: 1px solid #ccc;
+                                    height: auto;
+                                    margin-top: 10px;
+                                    min-height: 10px;
+                                    overflow: auto;
+                                    padding: 5px;
+                                    width: 106px;
+                                    word-break: break-word;
+                                    width: 100%;
+                                    font-size: 24px;">
+                                </div>
+                                </div>
+                                <div class="form-create-event-container06">
+                                    <div class="form-create-event-container08">
+                                        <span class="form-create-event-text06">
+                                            Фотография для обложки
+                                        </span>
+                                        <input type="file" id="fileImg" name="fileImg" accept="image/png" placeholder="Фотография" autocomplete="off" class="form-create-event-textinput3 input"/>
+
+                                    </div>
+                                    <div class="form-create-event-container09 custom-select">
+                                        <span class="form-create-event-text07">
+                                            Выберите награду за выполнение задания
+                                        </span>
+                                        <select name="reward" required="true" class="form-create-event-select">
+                                            <option value="100">
+                                                +100: "Очень нужная поддержка, требующая учасника выйти из дома или очень усердно трудиться надому"
+                                            </option>
+                                            <option value="60">
+                                                +60: "Сильная опора от волонтера, трудная, но выполнимая им из дома"
+                                            </option>
+                                            <option value="40">
+                                                +40: "Мягкая помощь волонтера, не трудная и выполнимая даже из дома"
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-create-event-container10">
+                                    <span class="form-create-event-text08 input">
+                                        <span>Передавая указанную информацию, вы принимаете</span>
+                                        <span class="form-create-event-text10">
+                                            условия пользовательского соглашения
+                                        </span>
+                                        <span>&nbsp;и</span>
+                                        <a href="privacy.html" class="form-create-event-navlink">
+                                            политики конфиденциальности
+                                        </a>
+                                        <br />
+                                    </span>
+                                    <span class="form-create-event-text13 input">
+                                        <span>
+                                            Отправляя заявку она будет отправлена на проверку нейросети и в ближайшее время опубликована или отклонена. В случае если запрос будет отклонен нейросетью, он все равно в будет проверен
+                                            администратором, а если отклонен и в этом случае, то тогда вам будет выслано письмо с причиной!
+                                        </span>
+                                        <br />
+                                        <br />
+                                        <span>
+                                            Убедительная просьба не мешать работе администрации и отправлять только нужные запросы помощи!
+                                        </span>
+                                        <br />
+                                    </span>
+                                </div>
+                                <button type="submit" class="form-create-event-submit-button button">
+                                    <span class="form-create-event-text19">
+                                        <span>Отправить обращение</span>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/custom-select.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/big-input.js') }}"></script>
+    </body>
+</html>

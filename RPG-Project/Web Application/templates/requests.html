@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Page-Event-List - All United World</title>
+      <meta property="og:title" content="Page-Event-List - All United World" />
+      <meta name="robots" content="noindex" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8" />
+      <meta property="twitter:card" content="summary_large_image" />
+      
+      {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+      <div>
+          <link rel="stylesheet" href="{{ url_for('static',filename='css/lobby.css') }}"/>
+          <div class="page-event-list-container"> 
+                
+            {% include "components/header.html" %}
+          
+                <div class="page-event-list-hero">
+                    <div class="page-event-list-hero1 heroContainer">
+                        <div class="page-event-list-container01">
+                            <span class="page-event-list-text">
+                                <span>Хотите найти какую-то определенную активность?</span>
+                                <br />
+                            </span>
+                            <form name="eventSearch" class="page-event-list-form">
+                                <textarea required="true" name="search" rows="1" placeholder="начни вводить здесь..." class="page-event-list-textarea textarea"></textarea>
+                                <button type="submit" class="page-event-list-button button" method="post">
+                                    Поиск
+                                </button>
+                            </form>
+                        </div>
+                        <div class="page-event-list-ui-container-for-different-device">
+                            <div class="page-event-list-events-group-block">
+                                <h1 class="page-event-list-group-name">
+                                    <span>Новые трудные запросы помощи</span>
+                                    <br />
+                                </h1>
+                                <div class="page-event-list-container02">
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name11">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name12">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name13">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-event-list-events-group-block1">
+                                <h1 class="page-event-list-group-name1">
+                                    <span>Новые простые активности</span>
+                                    <br />
+                                </h1>
+                                <div class="page-event-list-container03">
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name19">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name20">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name21">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-event-list-ui-container-for-different-device1">
+                            <div class="page-event-list-events-group-block2">
+                                <h1 class="page-event-list-group-name2">
+                                    <span>Давно созданные, но активные запросы</span>
+                                    <br />
+                                </h1>
+                                <div class="page-event-list-container04">
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name14">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name15">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-event-feature-card featuresCard custom-event-root-class-name16">
+                                        <div class="custom-event-event-block">
+                                            <div class="custom-event-header">
+                                                <div class="custom-event-title-block">
+                                                    <h2 class="custom-event-event-title">
+                                                        <span>Title</span>
+                                                    </h2>
+                                                </div>
+                                                <div class="custom-event-revard-block">
+                                                    <p class="custom-event-revard-count">
+                                                        <span>+100</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="custom-event-main-content">
+                                            <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                            <div class="custom-event-custom-info-block"></div>
+                                        </div>
+                                        <div class="custom-event-event-block1">
+                                            <div class="custom-event-container">
+                                                <span class="custom-event-creation-time">
+                                                    <span>01/01/2024</span>
+                                                </span>
+                                                <span class="custom-event-text">откл.:</span>
+                                                <span class="custom-event-users-responded">
+                                                    <span>1</span>
+                                                </span>
+                                            </div>
+                                            <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                    <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                        <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                            <path d="M426 726v-428l214 214z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                            <span class="custom-event-text1">
+                                                                Скопировать ссылку
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                            <span class="custom-event-text2">
+                                                                Пожаловаться
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-event-list-top-events-group-block">
+                                <h1 class="page-event-list-group-name3">
+                                    <span>ТОП 3 пользователя по активности</span>
+                                    <br />
+                                </h1>
+                                <div class="page-event-list-container05">
+                                    <div class="page-event-list-container06">
+                                        <div class="page-event-list-container07">
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name9">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title">
+                                                                <span>Title</span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count">
+                                                                <span>+100</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time">
+                                                            <span>01/01/2024</span>
+                                                        </span>
+                                                        <span class="custom-event-text">откл.:</span>
+                                                        <span class="custom-event-users-responded">
+                                                            <span>1</span>
+                                                        </span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                                    <span class="custom-event-text1">
+                                                                        Скопировать ссылку
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                                    <span class="custom-event-text2">
+                                                                        Пожаловаться
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="page-event-list-users-counter"><h1>0</h1></div>
+                                    </div>
+                                    <div class="page-event-list-container08">
+                                        <div class="page-event-list-container09">
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name18">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title">
+                                                                <span>Title</span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count">
+                                                                <span>+100</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time">
+                                                            <span>01/01/2024</span>
+                                                        </span>
+                                                        <span class="custom-event-text">откл.:</span>
+                                                        <span class="custom-event-users-responded">
+                                                            <span>1</span>
+                                                        </span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                                    <span class="custom-event-text1">
+                                                                        Скопировать ссылку
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                                    <span class="custom-event-text2">
+                                                                        Пожаловаться
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="page-event-list-users-counter1"><h1>0</h1></div>
+                                    </div>
+                                    <div class="page-event-list-container10">
+                                        <div class="page-event-list-container11">
+                                            <div class="custom-event-feature-card featuresCard custom-event-root-class-name17">
+                                                <div class="custom-event-event-block">
+                                                    <div class="custom-event-header">
+                                                        <div class="custom-event-title-block">
+                                                            <h2 class="custom-event-event-title">
+                                                                <span>Title</span>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="custom-event-revard-block">
+                                                            <p class="custom-event-revard-count">
+                                                                <span>+100</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-event-main-content">
+                                                    <img alt="image" src="https://www.snta.ru/upload/iblock/acc/acce30fb1df99788d3679c3f30dc57c9.jpeg" loading="lazy" class="custom-event-image" />
+                                                    <div class="custom-event-custom-info-block"></div>
+                                                </div>
+                                                <div class="custom-event-event-block1">
+                                                    <div class="custom-event-container">
+                                                        <span class="custom-event-creation-time">
+                                                            <span>01/01/2024</span>
+                                                        </span>
+                                                        <span class="custom-event-text">откл.:</span>
+                                                        <span class="custom-event-users-responded">
+                                                            <span>1</span>
+                                                        </span>
+                                                    </div>
+                                                    <div data-thq="thq-dropdown" class="custom-event-menu list-item">
+                                                        <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle">
+                                                            <div data-thq="thq-dropdown-arrow" class="custom-event-dropdown-arrow">
+                                                                <svg viewBox="0 0 1024 1024" class="custom-event-icon">
+                                                                    <path d="M426 726v-428l214 214z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <ul data-thq="thq-dropdown-list" class="custom-event-dropdown-list">
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle1">
+                                                                    <span class="custom-event-text1">
+                                                                        Скопировать ссылку
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                            <li data-thq="thq-dropdown" class="custom-event-dropdown1 list-item">
+                                                                <div data-thq="thq-dropdown-toggle" class="custom-event-dropdown-toggle2">
+                                                                    <span class="custom-event-text2">
+                                                                        Пожаловаться
+                                                                    </span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="page-event-list-users-counter2"><h1>0</h1></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+            
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% if HelpRequest %}
+        <title>Запрос помощи {{ HelpRequest.Name }}</title>
+        <meta property="og:site_name" content="Запрос помощи от {{ RequestCreator.Surname }} на платформе валонтерской помощи Весь Добрый Мир"/>
+        {% if HelpRequest.Description %}
+            <meta property="og:title" content="{{ HelpRequest.Description }}" />
+        {% else %}
+            <meta property="og:title" content="Запрос о помощи на платформе валонтерской помощи Весь Добрый Мир" />
+        {% endif %}
+      {% endif %}
+      <meta property="og:description" content="Хотите помочь нуждающемуся человеку или сами нуждаетесь в помощи? Присоеденийтесь к ВДМ!"/>
+      <meta property="og:image" content="data:image/png;base64,{{ HelpRequest.ImgFIle }}"/>
+
+      {% include "components/default-meta-and-icons.html" %}
+    </head>
+    <body>
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+      <div>
+          <link rel="stylesheet" href="{{ url_for('static',filename='css/event.css') }}"/>
+            <div class="page-event-container">
+                
+              {% include "components/header.html" %}
+
+                <div class="page-event-hero">
+                    <div class="page-event-hero1 heroContainer">
+                        <div class="page-event-container01">
+                            <div class="page-event-user-info">
+                                <div class="page-event-container02">
+                                    {% if HelpRequest.ImgFIle %}
+                                    <img alt="image" src="data:image/png;base64,{{ HelpRequest.ImgFIle | b64encode }}" loading="lazy" class="custom-event-image" onerror="this.style.display='none'"/>
+                                    {% endif %}
+                                    <div class="page-event-container03">
+                                        <div class="page-event-container04">
+                                            <h1 id="event-tittle">{{HelpRequest.Name}}</h1>
+                                        </div>
+                                        <div class="page-event-container05">
+                                            <h1 class="page-event-text01">
+                                                <span>Очков за выполнение</span>
+                                            </h1>
+                                            <h1 class="page-event-text04">+</h1>
+                                            <h1 id="event-reward" class="page-event-text05">
+                                                <span>{{HelpRequest.Reward}}</span>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="page-event-container06">
+                                    <div class="page-event-container07">
+                                        <h1 class="page-event-text08">
+                                            <span>Дополнительная информация:</span>
+                                        </h1>
+                                        <span id="discription" class="page-event-text11">
+                                            <span>
+                                                {{HelpRequest.Description | safe}}
+                                            </span>
+                                            <br />
+                                        </span>
+                                    </div>
+                                    <button class="page-event-login buttonFilled button">
+                                        Я хочу помочь!
+                                    </button>
+                                    <div class="page-event-container09">
+                                        <div class="page-event-container10">
+                                            <div class="page-event-container11">
+                                                <h1 class="page-event-text20">
+                                                    <span>Создатель запроса:</span>
+                                                </h1>
+                                                <div class="page-event-creator-container">
+                                                    {% if RequestCreator.Icon %}
+                                                    <img alt="image" src="data:image/png;base64,{{ RequestCreator.Icon|b64encode }}" loading="lazy" class="custom-event-image" onerror="this.style.display='none'" style="max-width: 150px; max-height: 150px;"/>
+                                                    {% else %}
+                                                    <img alt="image" src="https://i.postimg.cc/L6LrNH6n/user.png"  loading="lazy" class="custom-event-image" />
+                                                    {% endif %}
+                                                    <div class="page-event-container12">
+                                                        <a href={{ url_for('profile', user_id = RequestCreator.ID) }}>
+                                                            <h1 id="creator-surname-label" class="page-event-text23">
+                                                                {{RequestCreator.Surname}}
+                                                            </h1>
+                                                        </a>
+                                                        <a href={{ url_for('profile', user_id = RequestCreator.ID) }}>
+                                                            <h1 id="creator-name-label" class="page-event-heading">
+                                                                {{RequestCreator.Name}}
+                                                            </h1>
+                                                        </a>
+                                                        <a href={{ url_for('profile', user_id = RequestCreator.ID) }}>
+                                                            <h1 id="creator-father-name-label" class="page-event-text24">
+                                                                {{RequestCreator.FatherName}}
+                                                            </h1>
+                                                        </a>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="page-event-container13">
+                                                <h1 class="page-event-text25">
+                                                    <span>Создан:</span>
+                                                    <br />
+                                                </h1>
+                                                <div class="page-event-container14">
+                                                    <h1 id="event-creation-time" class="page-event-text28">
+                                                        {{ HelpRequest.CreationTime | format_time_since }}
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <button class="page-event-login1 buttonFilled button">
+                                                Пожаловаться на запрос
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% include "components/footer.html" %}
+
+            </div>
+        </div>
+        <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    </body>
+</html>

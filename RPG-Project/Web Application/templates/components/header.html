@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/header.css') }}"/>
+<div class="header-header">
+    <header data-thq="thq-navbar" class="header-navbar-interactive navbarContainer">
+        <a href="{{url_for('index')}}"><img src="{{url_for('static',filename='css/public/akw-icon-200h.png')}}" class="header-icon" /></a><a href="{{url_for('index')}}"><img src="css/public/akw-icon-cuted%20(2)-200h.png" class="header-icon-mobile" /></a>
+        <div data-thq="thq-navbar-nav" class="header-desktop-menu">
+            <nav class="header-links">
+                <a href="{{url_for('create-request')}}" class="header-nav12"><span class="header-text">нужна </span><span class="header-text01">помощь</span></a>
+                <a href="{{url_for('requests')}}" class="header-nav121"><span class="header-text02">оказать&nbsp;</span><span class="header-text03">помощь</span></a>
+            </nav>
+            {%if User%}
+                <div id="RegisteredMenuPC" class="header-registered-menu">
+                    <div class="header-container">
+                        <div class="notifications" id="notificationIcon">
+                            <div class="icon">
+                                <img src="{{url_for('static',filename='css/public/notification-bell.png')}}" style='width: 30px;'/>
+                                
+                                <span class="badge">0</span>
+                            </div>
+                            <div class="menu">
+                                <a>No new notifications</a>
+                            </div>
+                        </div>
+                        {% if User[Icon] %}
+                            <a href="{{ url_for('profile', user_id = User['ID']) }}" class="header-navlink2"><img id="userProfile" alt="image" src="data:image/png;base64,{{ User[Icon] }}" class="header-image" /></a>
+                        {% else %}
+                            <a href="{{ url_for('profile', user_id = User['ID']) }}" class="header-navlink2"><img id="userProfile" alt="image" src="https://i.postimg.cc/L6LrNH6n/user.png" class="header-image" /></a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div id="UnRegisteredMenuPC" class="header-un-registered-menu">
+                    <a href="{{url_for('login')}}" class="header-login buttonFilled">Войти</a><span class="header-split"><span>|</span><br /></span><a href="{{url_for('registration')}}" class="header-register buttonFilled">Регистрация</a>
+                </div>
+            {% endif %}
+        </div>
+        <div data-thq="thq-burger-menu" class="header-burger-menu">
+            <nav class="header-links1">
+                <a href="{{url_for('create-request')}}" class="header-nav122"><span class="header-text06">нужна </span><span class="header-text07">помощь</span></a>
+                <a href="{{url_for('requests')}}" class="header-nav123"><span class="header-text08">оказать&nbsp;</span><span class="header-text09">помощь</span></a>
+            </nav>
+            <svg viewBox="0 0 1024 1024" class="header-icon01 socialIcons">
+                <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+            </svg>
+        </div>
+        <div data-thq="thq-mobile-menu" class="header-mobile-menu1 mobileMenu">
+            <div class="header-nav">
+                <div class="header-top">
+                    <a href="{{url_for('index')}}" class="header-navlink3"><img src="{{url_for('static',filename='css/public/akw-icon-200h.png')}}" class="header-icon03" /></a>
+                    <div data-thq="thq-close-menu" class="header-close-menu">
+                        <svg viewBox="0 0 1024 1024" class="header-icon04 socialIcons">
+                            <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <nav class="header-links2">
+                    <a href="{{url_for('index')}}" class="header-nav124"><span class="header-text10">Главная</span><br /></a><a href="{{url_for('create-request')}}" class="header-nav22"><span>Создать запрос</span><br /></a>
+                    <a href="{{url_for('requests')}}" class="header-nav32"><span>Оказать помощь</span><br /></a>
+                </nav>
+                {%if User%}
+                <div id="RegisteredMenuMobile" class="header-registered-menu1" style="user-select: none;">
+                    <div class="header-container1">
+                        <div class="notifications" id="notificationIcon">
+                            <div class="icon">
+                                &#128276;
+                                <span class="badge">0</span>
+                            </div>
+                            <div class="menu">
+                                <a>No new notifications</a>
+                            </div>
+                        </div>
+                        {% if User['Icon'] %}
+                            <a href="{{ url_for('profile', user_id = User['ID']) }}" class="header-navlink4"><img id="userProfileMobile" alt="image" src="data:image/png;base64,{{ User['Icon'] }}" class="header-image1" /></a>
+                        {% else %}
+                            <a href="{{ url_for('profile', user_id = User['ID']) }}" class="header-navlink4"><img id="userProfileMobile" alt="image" src="https://i.postimg.cc/L6LrNH6n/user.png" class="header-image1" /></a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% else %}
+                    <div id="UnRegisteredMenuMobile" class="header-un-registered-menu1">
+                        <a href="{{url_for('login')}}" class="header-login1 buttonFilled">Войти</a><span class="header-split1"><span>|</span><br /></span>
+                        <a href="{{url_for('registration')}}" class="header-register1 buttonFilled">Регистрация<span>Регистрация</span></a>
+                    </div>
+                {% endif %}
+                <div class="header-icon-group">
+                    <svg viewBox="0 0 1024 1024" class="header-icon06 socialIcons">
+                        <path
+                            d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 960.002c-62.958 0-122.872-13.012-177.23-36.452l233.148-262.29c5.206-5.858 8.082-13.422 8.082-21.26v-96c0-17.674-14.326-32-32-32-112.99 0-232.204-117.462-233.374-118.626-6-6.002-14.14-9.374-22.626-9.374h-128c-17.672 0-32 14.328-32 32v192c0 12.122 6.848 23.202 17.69 28.622l110.31 55.156v187.886c-116.052-80.956-192-215.432-192-367.664 0-68.714 15.49-133.806 43.138-192h116.862c8.488 0 16.626-3.372 22.628-9.372l128-128c6-6.002 9.372-14.14 9.372-22.628v-77.412c40.562-12.074 83.518-18.588 128-18.588 70.406 0 137.004 16.26 196.282 45.2-4.144 3.502-8.176 7.164-12.046 11.036-36.266 36.264-56.236 84.478-56.236 135.764s19.97 99.5 56.236 135.764c36.434 36.432 85.218 56.264 135.634 56.26 3.166 0 6.342-0.080 9.518-0.236 13.814 51.802 38.752 186.656-8.404 372.334-0.444 1.744-0.696 3.488-0.842 5.224-81.324 83.080-194.7 134.656-320.142 134.656z"
+                        ></path>
+                    </svg>
+                    <a href="https://vk.com/unitedworld21" target="_blank" rel="noreferrer noopener" class="header-link">
+                        <svg viewBox="0 0 1118.8662857142856 1024" class="header-icon08">
+                            <path
+                                d="M1095.429 297.143c8.571 23.429-18.286 78.286-85.714 168-110.857 147.429-122.857 133.714-31.429 218.857 88 81.714 106.286 121.143 109.143 126.286 0 0 36.571 64-40.571 64.571l-146.286 2.286c-31.429 6.286-73.143-22.286-73.143-22.286-54.857-37.714-106.286-135.429-146.286-122.857 0 0-41.143 13.143-40 101.143 0.571 18.857-8.571 29.143-8.571 29.143s-10.286 10.857-30.286 12.571h-65.714c-144.571 9.143-272-124-272-124s-139.429-144-261.714-431.429c-8-18.857 0.571-28 0.571-28s8.571-10.857 32.571-10.857l156.571-1.143c14.857 2.286 25.143 10.286 25.143 10.286s9.143 6.286 13.714 18.286c25.714 64 58.857 122.286 58.857 122.286 57.143 117.714 96 137.714 118.286 125.714 0 0 29.143-17.714 22.857-160-2.286-51.429-16.571-74.857-16.571-74.857-13.143-17.714-37.714-22.857-48.571-24.571-8.571-1.143 5.714-21.714 24.571-30.857 28-13.714 77.714-14.286 136.571-13.714 46.286 0.571 59.429 3.429 77.143 7.429 54.286 13.143 36 63.429 36 184.571 0 38.857-7.429 93.143 20.571 110.857 12 8 41.714 1.143 114.857-123.429 0 0 34.286-59.429 61.143-128.571 4.571-12.571 14.286-17.714 14.286-17.714s9.143-5.143 21.714-3.429l164.571-1.143c49.714-6.286 57.714 16.571 57.714 16.571z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="{{ url_for('static', filename='js/header-menu.js') }}"></script>
+</div>

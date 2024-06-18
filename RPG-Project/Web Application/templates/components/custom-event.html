@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+        <div>
+          <link rel="stylesheet" href="{{ url_for('static',filename='css/custom-event.css') }}"/>
+            <div class="custom-event-feature-card featuresCard">
+                <div class="custom-event-event-block">
+                    <div class="custom-event-header">
+                        <div class="custom-event-title-block">
+                            <a href="{{url_for('request', request_id = request.ID)}}"> <h2 class="custom-event-event-title"><span>{{ request.Name | truncate }}</span></h2></a>
+                        </div>
+                        <div class="custom-event-revard-block">
+                            <p class="custom-event-revard-count"><span>{{ request.Reward }}</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-event-main-content">
+                  {% if request.ImgFIle %}
+                    <img alt="image" src="data:image/png;base64,{{ request.ImgFIle|b64encode }}" loading="lazy" class="custom-event-image" onerror="this.style.display='none'" style="max-width: 150px; max-height: 150px;"/>
+                    <div class="custom-event-custom-info-block">{{ request.Description | truncate(length=120) | safe}}</div>
+                  {% else %}
+                    <div class="custom-event-custom-info-block">{{ request.Description | truncate(length=120) | safe }}</div>
+                  {% endif %}
+                </div>
+                <div class="custom-event-event-block1">
+                    <div class="custom-event-container">
+                        <span class="custom-event-creation-time"><span>{{ request.CreationTime | format_time_since }}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/dropdown-menu.js') }}"></script>
+    </body>
+</html>
